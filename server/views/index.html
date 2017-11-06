@@ -1,0 +1,23 @@
+{% extends './layout.html' %} {% block title %}Brand{% endblock%} {% block contentList%}
+
+
+
+<div id="content" class="row contentList">
+    {% for article in articles %}
+    <div class="col-sm-4 col-xs-6 article">
+        <a class="articleList pjax" href="/index/datails/{{ article.id }}" title="{{ article.title }}">
+            <div class="articleTitle">
+                {{ article.title }}
+            </div>
+            <img class="articleImg" src="{{ article.cover }}" alt="">
+        </a>
+    </div>
+    {% endfor %}
+
+</div>
+
+
+{% endblock%} {% block js %}
+
+<script data-main="index/index" src="/public/common/main.js"></script>
+{% endblock%}

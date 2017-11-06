@@ -1,0 +1,18 @@
+{% extends './layout.html' %} {% block title %} {{ article.title }} {% endblock%} {% block contentList%}
+<div id="content" class="post-single">
+
+    <div id="singular-content">
+        <article>
+            <header class="entry-header">
+                <h1> {{article.title}}</h1>
+            </header>
+
+            <div class="entry-content"> {{article.body|raw()}}</div>
+
+        </article>
+    </div>
+
+</div>
+{% endblock%} {% block content %} {% endblock%} {% block js %}
+<script data-main="article-details/article-details" src="/public/common/main.js"></script>
+{% endblock%}

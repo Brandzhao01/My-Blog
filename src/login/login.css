@@ -1,0 +1,24 @@
+body.login {
+    background: url(http://cn.bing.com/az/hprichbg/rb/DerwentDam_ZH-CN8389406299_1920x1080.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.login form {
+    background: rgba(255, 251, 240, 0.3);
+    padding: 26px 24px 46px;
+}
+
+.login .container {
+    margin-top: 100px;
+}
+
+.login .avatar {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url(./avatar.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    margin: 20px auto;
+}

@@ -1,0 +1,78 @@
+{% if isAjax %} {% block contentList %} {% endblock%} {% else %}
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{{ article.title }}{% endblock%}</title>
+    {%if !isDev%}
+
+
+
+
+    <link rel="stylesheet" href="public/css/admin-lib.css">
+
+    <link rel="stylesheet" href="public/css/lib.css"> {%endif%} {% block css %}{% endblock%}
+</head>
+
+<body>
+
+    <p style="margin-top:20px;text-align:center"><strong>！！！须知：大家可以发布文章到此网站，只需点击'发布文章'即可，发布的文章作者有权删除，谢谢</strong></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 divlogo">
+
+                <a id="logo1" class=" logo1" href="/"></a>
+                <a class=" logo2" href="/"></a>
+
+            </div>
+            <div class="col-sm-6 col-xs-12 pull-left nav">
+                <a class="login pull-right" href="/login">发布文章</a>
+
+                <div class="line"></div><span class="round"></span>
+                <p class="mainName">Brand Zhao</p>
+                <div class="line line1"></div><span class="round round1"></span>
+                <span class="lineNav"></span>
+                <span class="lineNav lineNav1"></span>
+                <a class="nav-other nav-other1 pjax" href="/contact">联系</a>
+                <a class="nav-other nav-other2 pjax" href="/personal">个人摘要</a>
+                <a class="nav-other nav-other3 pjax" href="/know">使用须知</a>
+            </div>
+
+        </div>
+        <main id="main">
+            {% block contentList %} {% endblock%}
+
+        </main>
+
+
+    </div>
+
+
+
+
+    <!-- {% block content %}{% endblock%} -->
+
+    <p class="rights">© 2017 Brand Zhao @ 版权所有</p>
+
+    <script src="/public/common/admin-lib.js"></script>
+    <script src="/public/common/lib.js"></script>
+    {% block js %}{% endblock%}
+    <!-- 服务器启动后浏览器页面自动刷新 -->
+    {%if isDev%}
+    <script src="/reload/reload.js"></script>
+
+    {%endif%}
+    <script src="/public/common/main.js"></script>
+</body>
+
+</html>
+
+
+{% endif %}
